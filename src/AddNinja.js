@@ -19,6 +19,11 @@ class AddNinja extends Component {
     this.props.addNinja(this.state);
   };
   render() {
+
+    const styles = {
+      marginLeft: 10,
+    }
+
     return (
       <div>
         <h2>Add new guy</h2>
@@ -32,7 +37,7 @@ class AddNinja extends Component {
           <Button
             variant="contained"
             color="primary"
-            style={{ marginLeft: 10 }}
+            style={styles}
             onClick={this.handleSubmit}
           >
             Add ninja

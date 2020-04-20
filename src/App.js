@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Ninjas from "./Ninjas";
 import AddNinja from "./AddNinja";
 
+
 class App extends Component {
   state = {
     ninjas: [
@@ -10,6 +11,9 @@ class App extends Component {
       { name: "Jacek", age: 23, belt: "black", id: 3 },
     ],
   };
+
+
+
 
   addNinja = (ninja) => {
     ninja.id = Math.random();
@@ -29,8 +33,13 @@ class App extends Component {
   };
 
   render() {
+
+    const styles = {
+      textAlign: 'center',
+    }
+
     return (
-      <div className="App" style={{ textAlign: "center" }}>
+      <div className="App" style={styles}>
         <h1>React training!</h1>
         <p>Welcome ;)</p>
         <Ninjas deleteNinja={this.deleteNinja} ninjas={this.state.ninjas} />
